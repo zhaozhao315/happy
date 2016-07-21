@@ -1,0 +1,60 @@
+/*=================main==========================================*/
+#main{width:1388px;height:300px;position:relative}
+#main .list{width:1388px;height:300px;position:relative}
+#main .list li{position:absolute;left:0;top:0}
+#main .list li img{position:absolute;top:0;left:0}
+#main .list li img{width:1388px;height:300px}
+#main .list-btn{position:absolute;bottom:20px;right:179px}
+#main .list-btn li{margin-right:6px;width:10px;height:10px;border:4px solid #fff;-webkit-border-radius:10px;float:left}
+#main .list-btn .active{background:#fff}
+#main .prev{position:absolute;left:124px;bottom:124px;width:56px;height:56px;-webkit-border-radius:56px;background:#000;opacity:0.7;color:#fff;font-size:32px;text-align:center;line-height:56px;display:none;cursor:pointer}
+#main .next{position:absolute;bottom:124px;right:124px;width:56px;height:56px;-webkit-border-radius:56px;background:#000;opacity:0.7;color:#fff;font-size:32px;text-align:center;line-height:56px;display:none;cursor:pointer}
+/*=================logo==========================================*/
+#logo{width:1133px;height:68px;padding:22px 0 0 255px}
+#logo ul li{height:48px;padding:14px 0 0 48px;float:left;margin-right:90px}
+#logo ul .guan{background:url(../img/guan.png) no-repeat}
+#logo ul .hai{background:url(../img/hai.png) no-repeat}
+#logo ul .man{background:url(../img/man.png) no-repeat}
+#logo ul .shou{background:url(../img/shou.png) no-repeat}
+#logo ul li .chi{font-size:17px;color:#404040;font-weight:bold}
+#logo ul li .eng{font-size:7px;color:#404040}
+/*=================banner==========================================*/
+#banner{width:1367px;height:11495px;background:url(../img/bg.png) repeat;padding-left:56px;position:relative}
+#banner #ban1{height:160px;position:relative}
+#banner #ban1 ul li{float:left;margin:-right:9px;position:absolute;top:30px}
+#banner #ban1 ul .top1{left:0px}
+#banner #ban1 ul .top2{left:300px}
+#banner #ban1 ul .top3{left:600px}
+#banner #ban1 ul .top4{left:900px}
+#banner .img{margin:30px 0 30px 316px}
+#banner #ban2{position:relative;width:1191px;height:521px;background:#fff}
+#banner #ban2 #ban2-left img{float:left;position:absolute;top:0px;left:0px}
+#banner #ban2 #ban2-right{width:875px}
+#banner #ban2 #ban2-right ul li{float:left;position:absolute}
+#banner #ban2 #ban2-right ul .li1{top:0px;left:315px}
+#banner #ban2 #ban2-right ul .li2{top:0px;left:607px}
+#banner #ban2 #ban2-right ul .li3{top:0px;left:899px}
+#banner #ban2 #ban2-right ul .li4{top:260px;left:315px}
+#banner #ban2 #ban2-right ul .li5{top:260px;left:607px}
+#banner #ban2 #ban2-right ul .li6{top:260px;left:899px}
+#banner #ban3{width:1164px;height:410px;background:#fff;-webkit-border-radius:4px;padding:15px 13px}
+#banner #ban3 #ban3-left{float:left;margin-right:5px}
+#banner #ban3 #ban3-left img{border:1px solid #ddd}
+#banner #ban3 #ban3-right img{margin:0 1px 3px 0;border:1px solid #ddd}
+#banner #ban4{width:1190px;}
+#banner #ban4 #ban4-l #ban4-l-top{width:800px;height:46px;padding-top:40px;border-bottom:2px solid #fff}
+#banner #ban4 #ban4-l #ban4-l-top h3{font-size:27px;color:#fff;font-family:'幼圆';font-weight:normal;float:left}
+#banner #ban4 #ban4-l #ban4-l-top a{float:right;font-size:12px;color:#fff;margin-top:22px;}
+#banner #ban4 #ban4-l #ban4-l-top img{margin:10px 0 0 16px}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom{margin-top:20px;width:800px;height:260px}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom img{float:left;overflow:hidden}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right{background:#fff;float:right;width:352px;height:250px;padding:10px 15px 0;position:relative}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .top{height:36px;width:352px} 
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .top .you{background:url(../img/p1-1.png) no-repeat;height:36px;padding-left:42px;display:block;float:left;padding-top:12px;color:#000}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .top .end{float:right;margin-top:12px;color:#a0a0a0}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo .title{display:block;margin-top:20px}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo p{margin-top:10px;line-height:20px;color:#666}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo #price{color:#E10482;position:absolute;left:15px;bottom:33px}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo .price{font-size:32px;color:#e10482;position:absolute;left:25px;bottom:25px}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo .o-price{font-size:16px;color:#999;position:absolute;left:130px;bottom:33px;text-decoration:line-through}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo a{position:absolute;right:15px;bottom:25px;width:112px;height:32px;background:#000;display:block;-webkit-border-radius:13px;line-height:32px;text-align:center;color:#fff;}
