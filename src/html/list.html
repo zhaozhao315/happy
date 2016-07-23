@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/list.css" />
+		<script src="../assets/jquery-1.12.0.js"></script>
+		<script src="../assets/index.js"></script>
+		<script src="../assets/list.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<span id="login" class="li"><a href="http://127.0.0.1:8020/jq/%E9%A1%B9%E7%9B%AE/%E9%A1%B9%E7%9B%AE/src/html/denglu.html">登录</a></span>
+			<span id="zhuce" class="li"><a href="http://127.0.0.1:8020/jq/%E9%A1%B9%E7%9B%AE/%E9%A1%B9%E7%9B%AE/src/html/zhuce.html">免费注册</a></span>
+			<ul>
+				<li class="right li">我的订单</li>
+				<li>|</li>
+				<li class="left right li">我的优惠券</li>
+				<li>|</li>
+				<li class="left right li">我的收藏</li>
+				<li>|</li>
+				<li class="left li">帮助中心</li>
+			</ul>	
+		</div>
+		<div id="floor">
+			<ul>
+				<li class="kefu">
+					<div class="right">
+						<button>联系客服</button>
+						<p>时间：9:00-24:00</p>
+						<p>热线：4008-006-006</p>
+					</div>
+					<div class="left">
+						<img src="../img/kefu.png" />
+						<span>在线客服</span>
+					</div>
+				</li>
+				<li class="gouwu">
+					<div >
+						<img src="../img/gouwuche.png" />
+						<span>购物袋</span>
+					</div>
+					<div class="num"></div>
+				</li>
+				<li class="shoucang">
+					<div class="shou">我的收藏</div>
+					<div class="shou1"><img src="../img/shoucang.png"/></div>
+				</li>
+				<li class="youhui">
+					<div class="quan">我的优惠券</div>
+					<div class="quan1"><img src="../img/youhuiquan.png"/></div>
+				</li>
+				<li class="ma">
+					<div class="zhuce">
+						<img src="../img/ma.png" />
+						<p>手机注册有礼</p>
+					</div>
+					<div><img src="../img/erweima.png"/></div>
+				</li>
+				<li class="top pointer">
+					<img src="../img/jian.png" />
+					<span>Top</span>
+				</li>
+			</ul>
+		</div>
+		<div id="search">
+			<img src="../img/logo.png" title="嗨淘全球"/>
+			<div class="search">
+				<input type="text" placeholder="搜索商品"/>
+				<button>搜索</button>
+				<ul>
+					<li class="li over">面霜</li>
+					<li>|</li>
+					<li class="li over">面膜</li>
+					<li>|</li>
+					<li class="li over">洁面</li>
+					<li>|</li>
+					<li class="li over">奶粉</li>
+					<li>|</li>
+					<li class="li over">纸尿裤</li>
+					<li>|</li>
+					<li class="li over">辅食</li>
+					<li>|</li>
+					<li class="li over">宝宝营养</li>
+					<li>|</li>
+					<li class="li over">唇部彩妆</li>
+					<li>|</li>
+					<li class="li over">身体护理</li>
+					<li>|</li>
+					<li class="li over">香氛</li>
+				</ul>
+			</div>
+		</div>
+		<div id="nav">
+			<span class="index over">首页</span>
+			<span class="temai over">全球特卖</span>
+			<span class="fenlei pointer"><img src="../img/fenlei.png"/>查看分类</span>
+			<span class="shouqi pointer"><img src="../img/cha.png"/>收起分类</span>
+		</div>
+		<div id="list">
+			<ul class="main_list">
+				<li>
+					<img src="../img/az.png" />
+					<span>面部护理</span>
+				</li>
+				<li>
+					<img src="../img/az.png" />
+					<span>个人护理</span>
+				</li>
+				<li>
+					<img src="../img/az.png" />
+					<span>时尚彩妆</span>
+				</li>
+				<li>
+					<img src="../img/az.png" />
+					<span>香氛/精油</span>
+				</li>
+				<li>
+					<img src="../img/az.png" />
+					<span>婴幼儿</span>
+				</li>
+				<li>
+					<img src="../img/az.png" />
+					<span>孕产妇</span>
+				</li>
+				<li>
+					<img src="../img/az.png" />
+					<span>营养保健</span>
+				</li>
+				<li>
+					<img src="../img/az.png" />
+					<span>荷兰直邮</span>
+				</li>
+			</ul>
+			<ul class="list">
+				<li class="one">
+					<ul>
+						<li>
+							<h4>洁面</h4>
+							<span>洁面膏/霜</span>
+							<span>洁肤皂</span>
+							<span>洁面摩丝/泡沫</span>
+							<span>洁面啫喱/胶</span>
+							<span>洁面乳</span>
+							<span>面部去角质</span>
+						</li>
+						<li>
+							<h4>面膜</h4>
+							<span>面膜贴</span>
+							<span>免洗面膜</span>
+							<span>水洗面膜</span>
+						</li>
+						<li>
+							<h4>眼部/T区/唇部护理</h4>
+							<span>眼罩</span>
+							<span>眼霜</span>
+							<span>眼部精华</span>
+							<span>眼膜</span>
+							<span>鼻膜</span>
+							<span>护唇膏</span>
+							<span>唇膜</span>
+						</li>
+						<li>
+							<h4>护肤套装</h4>
+							<span>护肤套装</span>
+							<span>套装小样</span>
+						</li>
+						<li>
+							<h4>爽肤水/化妆水</h4>
+							<span>爽肤水</span>
+							<span>美容液</span>
+							<span>喷雾</span>
+						</li>
+						<li>
+							<h4>乳液/面霜</h4>
+							<span>乳液</span>
+							<span>面霜</span>
+							<span>日霜</span>
+							<span>晚霜</span>
+							<span>凝露/凝胶/啫喱</span>
+							<span>防晒/修护</span>
+						</li>
+						<li>
+							<h4>精华</h4>
+							<span>精华液/露</span>
+							<span>精华乳/霜</span>
+							<span>原液</span>
+						</li>
+						<li>
+							<h4>男士护肤</h4>
+							<span>洁面</span>
+							<span>乳液/面霜</span>
+							<span>爽肤水</span>
+							<span>精华</span>
+							<span>面膜</span>
+						</li>
+						<p>查看全部品牌</p>
+					</ul>
+				</li>
+				<li class="two">
+					<ul>
+						<li>
+							<h4>个人洗护</h4>
+							<span>洗发</span>
+							<span>护发</span>
+							<span>洗护套装</span>
+							<span>沐浴露</span>
+							<span>香皂</span>
+							<span>美发造型</span>
+						</li>
+						<li>
+							<h4>美发工具</h4>
+							<span>美发梳</span>
+						</li>
+						<li>
+							<h4>身体护理</h4>
+							<span>喷雾</span>
+							<span>身体乳/精华</span>
+							<span>毛周去角质</span>
+							<span>颈部护理</span>
+							<span>塑身</span>
+							<span>丰胸</span>
+							<span>香体液</span>
+							<span>手霜/手膜</span>
+							<span>足部霜/足膜</span>
+						</li>
+						<li>
+							<h4>女性用品</h4>
+							<span>卫生巾</span>
+						</li>
+						<p>查看全部品牌</p>
+					</ul>
+				</li>
+				<li class="three">
+					<ul>
+						<li>
+							<h4>底部遮瑕</h4>
+							<span>遮瑕/修颜</span>
+							<span>bb霜/cc霜</span>
+							<span>隔离霜/妆前乳</span>
+							<span>粉饼</span>
+							<span>腮红/胭脂</span>
+							<span>蜜粉/散粉</span>
+							<span>粉底液/膏</span>
+						</li>
+						<li>
+							<h4>卸妆</h4>
+							<span>卸妆油</span>
+							<span>卸妆油</span>
+							<span>卸妆油</span>
+						</li>
+						<li>
+							<h4>彩妆工具</h4>
+							<span>化妆刷</span>
+							<span>化妆棉</span>
+						</li>
+						<li>
+							<h4>眼部彩妆</h4>
+							<span>眼影</span>
+							<span>眼影</span>
+							<span>眼影</span>
+							<span>眼影</span>
+							<span>眼影</span>
+							<span>眼影</span>
+						</li>
+						<li>
+							<h4>唇部彩妆</h4>
+							<span>口红/唇膏</span>
+							<span>口红/唇膏</span>
+						</li>
+						<li>
+							<h4>彩妆套装</h4>
+							<span>彩妆盒</span>
+							<span>彩装套装</span>
+						</li>
+						<p>查看全部品牌</p>
+					</ul>
+				</li>
+				<li class="four">
+					<h4>香水</h4>
+					<span>女士香水</span>
+					<span>女士香水</span>
+					<span>女士香水</span>
+					<span>女士香水</span>
+				</li>
+				<li class="five">
+					<ul>
+						<li>
+							<h4>奶粉</h4>
+							<span>1段</span>
+							<span>1段</span>
+							<span>1段</span>
+							<span>1段</span>
+							<span>1段</span>
+							<span>1段</span>
+						</li>
+						<li>
+							<h4>纸尿裤</h4>
+							<span>新生儿</span>
+							<span>新生儿</span>
+							<span>新生儿</span>
+							<span>新生儿</span>
+							<span>新生儿</span>
+						</li>
+						<li>
+							<h4>日用洗护</h4>
+							<span>护肤</span>
+							<span>护肤</span>
+							<span>护肤</span>
+						</li>
+						<li>
+							<h4>宝宝辅食</h4>
+							<span>米粉</span>
+							<span>米粉</span>
+							<span>米粉</span>
+							<span>米粉</span>
+							<span>米粉</span>
+						</li>
+						<li>
+							<h4>喂养工具</h4>
+							<span>奶瓶/奶嘴</span>
+							<span>奶瓶/奶嘴</span>
+						</li>
+						<li>
+							<h4>宝宝营养</h4>
+							<span>维生素</span>
+							<span>维生素</span>
+							<span>维生素</span>
+						</li>
+						<li>
+							<h4>宝宝出行</h4>
+							<span>安全座椅</span>
+						</li>
+						<p>查看全部品牌</p>
+					</ul>
+				</li>
+				<li class="six">
+					<ul>
+						<li>
+							<h4>孕妈用品</h4>
+							<span>卫生巾/护垫</span>
+						</li>
+						<li>
+							<h4>母婴其他用品</h4>
+						</li>
+						<li>
+							<h4>孕妈营养</h4>
+							<span>叶酸</span>
+							<span>叶酸</span>
+							<span>叶酸</span>
+						</li>
+						<p>查看全部品牌</p>
+					</ul>
+				</li>
+				<li class="seven">
+					<ul>
+						<li>
+							<h4>植物精华</h4>
+							<span>蔓越莓</span>
+							<span>蔓越莓</span>
+							<span>蔓越莓</span>
+							<span>蔓越莓</span>
+						</li>
+						<li>
+							<h4>膳食纤维</h4>
+							<span>酵素</span>
+						</li>
+						<li>
+							<h4>维生素</h4>
+							<span>维生素</span>
+							<span>维生素</span>
+							<span>维生素</span>
+						</li>
+						<li>
+							<h4>蛋白质</h4>
+							<span>胶原蛋白</span>
+							<span>胶原蛋白</span>
+						</li>
+						<p>查看全部品牌</p>
+					</ul>
+				</li>
+				<li class="eight">
+					<ul>
+						<li>
+							<h4>宝宝用品</h4>
+							<span>监视器</span>
+							<span>相册</span>
+						</li>
+						<li>
+							<h4>宝宝用品</h4>
+							<span>监视器</span>
+							<span>相册</span>
+						</li>
+						<li>
+							<h4>宝宝用品</h4>
+							<span>监视器</span>
+							<span>相册</span>
+						</li>
+						<li>
+							<h4>宝宝用品</h4>
+							<span>监视器</span>
+							<span>相册</span>
+						</li>
+						<li>
+							<h4>宝宝用品</h4>
+							<span>监视器</span>
+							<span>相册</span>
+						</li>
+						<li>
+							<h4>宝宝用品</h4>
+							<span>监视器</span>
+							<span>相册</span>
+						</li>
+						<li>
+							<h4>宝宝用品</h4>
+							<span>监视器</span>
+							<span>相册</span>
+						</li>
+						<p>查看全部品牌</p>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="shopping">
+			<div class="position">
+				首页>搜索结果页
+			</div>
+			<div class="lei">
+				<div class="lei-top">
+					<span class="result">"唇部彩妆"</span>商品共<span>27</span>个
+				</div>
+				<div class="lei-bottom">
+					<div class="bo">
+						<dl>
+							<dt>分类：</dt>
+							<dd>
+								<a href="">bb霜/cc霜</a>
+								<a href="">睫毛膏</a>
+								<a href="">唇膏/口红</a>
+								<a href="">唇彩/唇蜜</a>
+								<a href="">卸妆液</a>
+								<a href="">彩妆盒</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="tt">
+						<dl>
+							<dt>品牌：</dt>
+							<dd>
+								<a href="">CLIO/珂莱欧</a>
+								<a href="">DHC/蝶翠诗</a>
+								<a href="">Maxfactor/蜜丝佛陀</a>
+								<a href="">Etude House/伊蒂之屋</a>
+								<a href="">LANEIGE/兰芝</a>
+								<a href="">The saem/得鲜</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="tt">
+						<dl>
+							<dt>价格：</dt>
+							<dd>
+								<a href="">0-99</a>
+								<a href="">100-199</a>
+								<a href="">200-299</a>
+								<a href="">300-399</a>
+								<a href="">400-499</a>
+								<a href="">500-599</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				
+			</div>
+			<div class="paixu">
+				<dl>
+					<dt>排序：</dt>
+						<dd>
+							<a href="#" class="active">综合</a>
+							<a href="#">价格</a>
+							<a href="#">销量</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+					<span class="zhe">已抢光</span>
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+				</div>
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+			<div class="kouhong">
+				<div class="opa">
+					<img src="../img/kouhong.jpg" />
+					<span class="zhe">已抢光</span>
+				</div>
+				
+				<span class="ori">国内现货</span>
+				<p>YSL圣罗兰纯色唇釉6ml</p>
+				<span class="price">￥</span>
+				<b>219.00</b><br />
+				<span class="old">￥300.00</span>
+				<span class="buy">立即抢购</span>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="index">
+			<ul>
+				<li>
+					<h4>新手指南</h4>
+					<a class="pointer deco" href="#">购物流程</a>
+					<a class="pointer deco" href="#">购物须知</a>
+					<a class="pointer deco" href="#">联系客服</a>
+					<a class="pointer deco" href="#">常见问题</a>
+				</li>
+				<li>
+					<h4>支付方式</h4>
+					<a class="pointer deco" href="#">第三平台支付</a>
+					<a class="pointer deco" href="#">优惠券使用</a>
+				</li>
+				<li>
+					<h4>售后服务</h4>
+					<a class="pointer deco" href="#">退货政策</a>
+					<a class="pointer deco" href="#">退货流程</a>
+					<a class="pointer deco" href="#">退款说明</a>
+				</li>
+				<li>
+					<h4>商品配送</h4>
+					<a class="pointer deco" href="#">运费说明</a>
+					<a class="pointer deco" href="#">配送范围</a>
+					<a class="pointer deco" href="#">发货说明</a>
+					<a class="pointer deco" href="#">物流查询</a>
+				</li>
+				<li>
+					<h4>品牌保证</h4>
+					<a class="pointer deco" href="#">官方授权</a>
+					<a class="pointer deco" href="#">海关监管</a>
+					<a class="pointer deco" href="#">免税包邮</a>
+					<a class="pointer deco" href="#">售后无忧</a>
+				</li>
+				<li class="last">
+					<h4>手机嗨淘全球</h4>
+					<img src="../img/ma.png" />
+				</li>
+			</ul>
+			</div>
+			<div id="center">
+				<span>4008-006-006</span>
+				<ul>
+					<li >公司简介</li>
+					<li >联系我们</li>
+					<li >大事记</li>
+					<li>人才招募</li>
+					<li>帮助中心</li>
+					<li>法律声明</li>
+					<li>合作专区</li>
+					<li>友情链接</li>
+				</ul>
+			</div>
+			<div id="bottom">
+				<div class="bo">
+					<span>Copyright © 2010 - 2016, 版权所有 HITAO.TOP    湘ICP备10012668号-3  嗨淘全球网</span>
+					<span class="span">|</span>
+					<a href="#" class="pointer deco">营业执照</a>
+				</div>
+				<div class="fo">
+					<img src="../img/f1.png" />
+					<img src="../img/f2.png" />
+					<img src="../img/f3.png" />
+					<img src="../img/f4.png" />
+					<img src="../img/f5.png" />
+				</div>
+			</div>
+		</div>
+			
+	</body>
+</html>

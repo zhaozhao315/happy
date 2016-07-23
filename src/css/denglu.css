@@ -1,0 +1,41 @@
+/*========================head============================*/
+#head{width:1325px;height:147px;padding-left:64px}
+#welcome{width:979px;height:95px;padding:50px 180px 0 230px;background:#f5f5f5}
+#welcome img{float:left}
+#welcome span{float:left;display:block;margin-left:24px;width:85px;height:45px;line-height:18px;font-family:'微软雅黑';font-size:14px}
+#welcome p{float:right;height:12px;margin-top:10px;margin-right:8px}
+#welcome a{display:block;float:right;text-align:center;width:72px;height:30px;line-height:30px;border:1px solid #e10482;-webkit-border-radius:13px;background:#fff;color:#e10482}
+#denglu{width:1005px;height:334px;background:#fff;padding:48px 216px 254px 202px}
+#denglu ul li{float: left;width: 114px;margin-top: 2px;text-align: center;color: #333;font-size: 16px;line-height: 46px;border-bottom: 0 none;border-radius: 5px 5px 0 0;cursor: pointer;position: relative;z-index: 1}
+#denglu img{float:left}
+#denglu ul{height:48px;border-bottom:2px solid #000;margin-bottom: 26px;padding: 0 50px;width:240px;float:right}
+.current{background:#fff;border: 2px solid #000}
+#login_one{width:340px;height:252px;float:right}
+#login_one .name{width:320px;height:48px;margin-bottom:30px}
+#denglu .warn{height:30px;display:block;line-height:30px;color:#e10482;width:320px;display:none}
+#login_one .name .span{border-top-left-radius: 4px; border-bottom-left-radius: 4px;width: 78px;line-height: 46px;background: #f5f5f5;text-align: center;float: left;border: 1px solid #ccc; color: #666;}
+#login_one .name input{padding-left:10px;width:228px;height:46px;border-top-right-radius: 4px; border-bottom-right-radius: 4px;line-height:46px;border:1px solid #ccc}
+#login_one .word{width:320px;height:48px;margin-bottom:20px;}
+#login_one .word .span{border-top-left-radius: 4px; border-bottom-left-radius: 4px;width: 78px;line-height: 46px;background: #f5f5f5;text-align: center;float: left;border: 1px solid #ccc; color: #666;}
+#login_one .word input{padding-left:10px;width:228px;height:46px;border-top-right-radius: 4px; border-bottom-right-radius: 4px;line-height:46px;border:1px solid #ccc}
+#login_one .forget{width:63px;height:21px;float:right;margin-right:20px;color:#0097d9;margin-bottom:54px}
+#login_one .btn button{width:160px;height:40px;margin-left:86px;margin-top:86px;-webkit-border-radius:16px;background:#e10482;color:#fff;line-height:40px;text-align:center}
+#login_two{width:340px;height:294px;float:right;display:none}
+#login_two .name{width:320px;height:48px;margin-bottom:30px;}
+#login_two .name .span{border-top-left-radius: 4px; border-bottom-left-radius: 4px;width: 78px;line-height: 46px;background: #f5f5f5;text-align: center;float: left;border: 1px solid #ccc; color: #666;}
+#login_two .name input{padding-left:10px;width:228px;height:46px;border-top-right-radius: 4px; border-bottom-right-radius: 4px;line-height:46px;border:1px solid #ccc}
+#login_two .word{width:320px;height:48px;margin-bottom:30px;}
+#login_two .word .span{border-top-left-radius: 4px; border-bottom-left-radius: 4px;width: 78px;line-height: 46px;background: #f5f5f5;text-align: center;float: left;border: 1px solid #ccc; color: #666;}
+#login_two .word input{padding-left:10px;width:228px;height:46px;border-top-right-radius: 4px; border-bottom-right-radius: 4px;line-height:46px;border:1px solid #ccc}
+#login_two .duanxin{width:340px;height:48px;margin-bottom:30px}
+#login_two .duanxin .xin{border-top-left-radius: 4px; border-bottom-left-radius: 4px;width: 78px;line-height: 46px;background: #f5f5f5;text-align: center;float: left;border: 1px solid #ccc; color: #666;}
+#login_two .duanxin div{float:right;margin-right:20px;padding-left:10px;width:228px;height:46px;border-top-right-radius: 4px; border-bottom-right-radius: 4px;line-height:46px;border:1px solid #ccc}
+#login_two .duanxin div input{border:none;width:123px;height:46px}
+#login_two .duanxin .ma{width:105px;height:32px;float:right;color:#e10482}
+#login_two .btn button{width:160px;height:40px;margin-left:86px;margin-top:56px;-webkit-border-radius:16px;background:#e10482;color:#fff;line-height:40px;text-align:center}
+
+
+
+
+
+

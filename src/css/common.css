@@ -5,6 +5,7 @@ a{text-decoration:none}
 body{font-size:12px}
 .pointer{cursor:pointer}
 .text{text-decoration:underline}
+img{border:none}
 /*=================header==========================================*/
 #header{width:1388px;height:26px;background:#f4f4f4;border-bottom:1px solid #e8e8e8;position:relative}
 #header span{position:absolute;font-size:11px;color:#666666}
@@ -15,6 +16,26 @@ body{font-size:12px}
 #header ul .li{padding:0 15px}
 #header ul .left{border-left:1px solid #cbf4f4}
 #header ul .right{border-right:1px solid #f4f4cb}
+/*=================floor==========================================*/
+#floor{width:35px;height:100%;background:#000;position:fixed;right:0;top:0;z-index:99}
+#floor ul{padding-top:150px}
+#floor ul .kefu .right button{text-align:center;color:#0099CC;width:85px;height:25px;padding:0 0 10px;line-height:25px;background:#abebf4}
+#floor ul .kefu .right p{line-height:18px}
+
+#floor ul .kefu .right{display:none;background:#fff;opacity:0;border:1px solid #d3d3d3;width:128px;height:96px;padding:24px 0 0 12px;position:absolute;right:55px}
+#floor ul .kefu .left{overflow:hidden;width:15px;height:100px;color:#fff;background:#e10482;padding:20px 10px 0}
+#floor ul .kefu .left span{margin-top:10px}
+#floor ul .gouwu {overflow:hidden;width:15px;height:100px;color:#fff;background:#000;padding:20px 10px 0}
+#floor ul .gouwu span{margin-top:10px}
+#floor ul .num{width:16px;height:16px;-webkit-border-radius:8px;background:#fff;margin-top:10px;color:#e10482;text-align:center;line-height:16px}
+#floor ul .shoucang .shou1{width:15px;height:20px;padding:10px;margin-top:10px}
+#floor ul .shoucang .shou{display:none;opacity:0;text-align:center;line-height:20px;color:#e10482;background:#fff;width:80px;height:20px;padding:10px 0;position:absolute;right:55px}
+#floor ul .youhui .quan1{width:15px;height:20px;padding:10px;margin-top:10px}
+#floor ul .youhui .quan{display:none;opacity:0;text-align:center;line-height:20px;color:#e10482;background:#fff;width:80px;height:15px;padding:10px 0;position:absolute;right:55px}
+#floor ul .ma{width:15px;height:20px;padding:10px;margin-top:220px}
+#floor ul .ma .zhuce{display:none;opacity:0;background:#fff;width:110px;height:130px;padding:3px 4px;position:absolute;right:55px;margin-top:-105px}
+#floor ul .ma .zhuce p{line-height:20px;text-align:center}
+#floor ul .top{width:15px;height:20px;padding:10px;;color:#fff}
 /*=================search==========================================*/
 #search{width:1324px;height:110px;padding-left:64px}
 #search img{margin-top:1px;cursor:pointer;float:left}
@@ -33,3 +54,20 @@ body{font-size:12px}
 #nav .shouqi{right:81px;display:none}
 #nav .fenlei img{margin-right:9px}
 #nav .shouqi img{margin-right:9px}
+/*=================fooetr==========================================*/
+#footer{width:1423px;height:316px;padding-top:34px;background:#fff}
+#footer #index{width:1190px;height:144px;padding:0 116px 60px}
+#footer #index ul{width:1190px;height:144px}
+#footer #index ul li{float:left;width:90px;padding:0 40px}
+#footer #index ul .last{width:110px;padding:0 30px 0 90px}
+#footer #index ul li h4{width:90px;height:34px;color:#999999;font-size:16px}
+#footer #index ul .last h4{width:110px;height:34px}
+#footer #index ul li a{height:22px;font-size:11px;color:#000;display:block}
+#footer #center{width:1190px;height:38px;padding:0 116px;background:#000}
+#footer #center span{position:relative;display:block;float:left;background:url(../img/phone.png)no-repeat;left:0;top:3px;font-size:18px;color:#e30485;font-weight:bold;height:38px;line-height:38px;padding-left:35px;}
+#footer #center ul{float:right}
+#footer #center ul li{float:left;color:#fff;height:38px;line-height:38px;padding:0 16px;cursor:pointer}
+#footer #bottom .bo{width:1423px;text-align:center;margin-top:23px;height:24px;color:#9c9c9c}
+#footer #bottom .bo a{color:#9c9c9c}
+#footer #bottom .fo{width:944px;margin:23px 116px 0;border:1px solid #eeeeee;padding-left:246px}
+#footer #bottom .fo img{margin-top:6px;border-right:1px solid #eeeeee;cursor:pointer}

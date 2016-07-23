@@ -19,7 +19,7 @@
 #logo ul li .chi{font-size:17px;color:#404040;font-weight:bold}
 #logo ul li .eng{font-size:7px;color:#404040}
 /*=================banner==========================================*/
-#banner{width:1367px;height:11495px;background:url(../img/bg.png) repeat;padding-left:56px;position:relative}
+#banner{width:1367px;height:15228px;background:url(../img/bg.png) repeat;padding-left:56px;position:relative}
 #banner #ban1{height:160px;position:relative}
 #banner #ban1 ul li{float:left;margin:-right:9px;position:absolute;top:30px}
 #banner #ban1 ul .top1{left:0px}
@@ -42,15 +42,17 @@
 #banner #ban3 #ban3-left img{border:1px solid #ddd}
 #banner #ban3 #ban3-right img{margin:0 1px 3px 0;border:1px solid #ddd}
 #banner #ban4{width:1190px;}
+#banner #ban4 #ban4-l{float:left}
 #banner #ban4 #ban4-l #ban4-l-top{width:800px;height:46px;padding-top:40px;border-bottom:2px solid #fff}
 #banner #ban4 #ban4-l #ban4-l-top h3{font-size:27px;color:#fff;font-family:'幼圆';font-weight:normal;float:left}
 #banner #ban4 #ban4-l #ban4-l-top a{float:right;font-size:12px;color:#fff;margin-top:22px;}
 #banner #ban4 #ban4-l #ban4-l-top img{margin:10px 0 0 16px}
-#banner #ban4 #ban4-l #ban4-l-bottom .bottom{margin-top:20px;width:800px;height:260px}
-#banner #ban4 #ban4-l #ban4-l-bottom .bottom img{float:left;overflow:hidden}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom{margin-top:20px;width:800px;height:260px;position:relative}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .left{overflow:hidden;float:left;width:418px;height:260px;position:absolute}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom img{float:left;position:absolute;left:0;top:0}
 #banner #ban4 #ban4-l #ban4-l-bottom .bottom .right{background:#fff;float:right;width:352px;height:250px;padding:10px 15px 0;position:relative}
 #banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .top{height:36px;width:352px} 
-#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .top .you{background:url(../img/p1-1.png) no-repeat;height:36px;padding-left:42px;display:block;float:left;padding-top:12px;color:#000}
+#banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .top .you1{background:url(../img/p1-1.png) no-repeat;height:36px;padding-left:42px;display:block;float:left;padding-top:12px;color:#000}
 #banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .top .end{float:right;margin-top:12px;color:#a0a0a0}
 #banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo .title{display:block;margin-top:20px}
 #banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo p{margin-top:10px;line-height:20px;color:#666}
@@ -58,3 +60,53 @@
 #banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo .price{font-size:32px;color:#e10482;position:absolute;left:25px;bottom:25px}
 #banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo .o-price{font-size:16px;color:#999;position:absolute;left:130px;bottom:33px;text-decoration:line-through}
 #banner #ban4 #ban4-l #ban4-l-bottom .bottom .right .bo a{position:absolute;right:15px;bottom:25px;width:112px;height:32px;background:#000;display:block;-webkit-border-radius:13px;line-height:32px;text-align:center;color:#fff;}
+#banner #ban4 #ban4-r{background:#fff;-webkit-border-radius:3px;width:380px;margin-left:10px;float:right;margin-top:36px}
+#banner #ban4 #ban4-r #ban4-r-top{width:341px;height:18px;padding:40px 13px 0;}
+#banner #ban4 #ban4-r #ban4-r-top hr{width:116px;float:left;margin-top:8px}
+#banner #ban4 #ban4-r #ban4-r-top span{float:left;margin:0 16px;font-size:17px}
+#banner #ban4 #ban4-r #ban4-r-bottom{margin-top:10px}
+#banner #ban4 #ban4-r #ban4-r-bottom div{display:inline-block;position:relative;width:120px;height:120px;border:1px solid #fff}
+#banner #ban4 #ban4-r #ban4-r-bottom div span{position:absolute;left:0;bottom:-2px;display:block;width:120px;height:30px;line-height:30px;color:#fff;text-align:center;background:#444444;opacity:0.8;display:none}
+#banner #ban4 #ban4-r #ban4-r-top1{width:341px;height:18px;padding:40px 13px 0;}
+#banner #ban4 #ban4-r #ban4-r-top1 hr{width:116px;float:left;margin-top:8px}
+#banner #ban4 #ban4-r #ban4-r-top1 span{float:left;margin:0 16px;font-size:17px}
+#banner #ban4 #ban4-r #ban4-r-bottom1{padding:13px}
+#banner #ban4 #ban4-r #ban4-r-bottom1 img{-webkit-border-radius:3px;border:1px solid #fff}
+/*================list===================================*/
+#list{display:none}
+#list .main_list{width:180px;height:395px;background:#e4e4e4;position:absolute;right:536px;top:175px;z-index:10;}
+#list .main_list li{width:180px;height:48px;line-height:48px;}
+#list .main_list li img{margin-left:20px;margin-top:12px}
+#list .list p{float:right;width:100px;height:25px;border:1px solid #000;-webkit-border-radius:15px;line-height:25px;text-align:center;margin-right:15px}
+#list .list .one{z-index:10;background:#fff;width:506px;float:right;padding:15px;border-bottom:2px solid #eeeeee;position:absolute;right:0;top:175px;}
+#list .list .one li{width:230px;float:left;margin-right:20px;margin-bottom:20px}
+#list .list .one li h4{width:230px;height:22px;line-height:22px;border-bottom:2px solid #000}
+#list .list .one li span{line-height:25px;color:#666666;margin-right:15px}
+#list .list .two{z-index:10;background:#fff;width:506px;float:right;padding:15px;border-bottom:2px solid #eeeeee;position:absolute;right:0;top:175px;display:none}
+#list .list .two li{width:230px;float:left;margin-right:20px;margin-bottom:20px}
+#list .list .two li h4{width:230px;height:22px;line-height:22px;border-bottom:2px solid #000}
+#list .list .two li span{line-height:25px;color:#666666;margin-right:15px}
+#list .list .three{z-index:10;background:#fff;width:506px;float:right;padding:15px;border-bottom:2px solid #eeeeee;position:absolute;right:0;top:175px;display:none}
+#list .list .three li{width:230px;float:left;margin-right:20px;margin-bottom:20px}
+#list .list .three li h4{width:230px;height:22px;line-height:22px;border-bottom:2px solid #000}
+#list .list .three li span{line-height:25px;color:#666666;margin-right:15px}
+#list .list .four{z-index:10;background:#fff;width:506px;float:right;padding:15px;border-bottom:2px solid #eeeeee;position:absolute;right:0;top:175px;display:none}
+#list .list .four li{width:230px;float:left;margin-right:20px;margin-bottom:20px}
+#list .list .four li h4{width:230px;height:22px;line-height:22px;border-bottom:2px solid #000}
+#list .list .four li span{line-height:25px;color:#666666;margin-right:15px}
+#list .list .five{z-index:10;background:#fff;width:506px;float:right;padding:15px;border-bottom:2px solid #eeeeee;position:absolute;right:0;top:175px;display:none}
+#list .list .five li{width:230px;float:left;margin-right:20px;margin-bottom:20px}
+#list .list .five li h4{width:230px;height:22px;line-height:22px;border-bottom:2px solid #000}
+#list .list .five li span{line-height:25px;color:#666666;margin-right:15px}
+#list .list .six{z-index:10;background:#fff;width:506px;float:right;padding:15px;border-bottom:2px solid #eeeeee;position:absolute;right:0;top:175px;display:none}
+#list .list .six li{width:230px;float:left;margin-right:20px;margin-bottom:20px}
+#list .list .six li h4{width:230px;height:22px;line-height:22px;border-bottom:2px solid #000}
+#list .list .six li span{line-height:25px;color:#666666;margin-right:15px}
+#list .list .seven{z-index:10;background:#fff;width:506px;float:right;padding:15px;border-bottom:2px solid #eeeeee;position:absolute;right:0;top:175px;display:none}
+#list .list .seven li{width:230px;float:left;margin-right:20px;margin-bottom:20px}
+#list .list .seven li h4{width:230px;height:22px;line-height:22px;border-bottom:2px solid #000}
+#list .list .seven li span{line-height:25px;color:#666666;margin-right:15px}
+#list .list .eight{z-index:10;background:#fff;width:506px;float:right;padding:15px;border-bottom:2px solid #eeeeee;position:absolute;right:0;top:175px;display:none}
+#list .list .eight li{width:230px;float:left;margin-right:20px;margin-bottom:20px}
+#list .list .eight li h4{width:230px;height:22px;line-height:22px;border-bottom:2px solid #000}
+#list .list .eight li span{line-height:25px;color:#666666;margin-right:15px}
