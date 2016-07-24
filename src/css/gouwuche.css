@@ -1,0 +1,39 @@
+#stepcar{width:543px;height:78px;padding:32px 440px 0;border-top:2px solid #000;position:relative}
+#stepcar .steplist{width:534px;height:43px;background:url(../img/stepcart.png)no-repeat}
+#stepcar .steplist .show{width:40px;height:43px;background:url(../img/stepcart2.png)no-repeat}
+#stepcar .steplist span{position:absolute;top:78px;font-size:14px;display:block;height:21px}
+#stepcar .steplist .one{left:440px;color:#e10482}
+#stepcar .steplist .two{left:666px;color:#000}
+#stepcar .steplist .three{left:930px;color:#000}
+#mod_main{width:1003px;height:747px;padding:0 210px}
+#mod_main .wt{width:990px;height:37px;background:#eeeeee;margin-bottom:10px}
+#mod_main .wt th{line-height:37px}
+#mod_main .wt1{width:990px}
+#mod_main .wt1 h1{font-size: 16px;border-bottom: #cccccc solid 2px; margin-bottom: 10px;font-weight: normal;padding: 8px 0;}
+#mod_main .list{width:990px;height:181px;border:1px solid #eeeeee}
+#mod_main .list table tbody{width:990px;height:137px;border-bottom:1px solid #000}
+#mod_main .list tbody .one td{height:137px;text-align:center}
+#mod_main .list tbody .one td img{width:100px;height:100px;border:1px solid #eee;float:left;}
+#mod_main .list tbody .one td p{margin-top:10px}
+#mod_main .list tbody .one td .price{font-weight:bolder;font-size:14px}
+#mod_main .list tbody .one .num a{float:left;width:22px;height:22px;border:1px solid #eee;line-height:22px}
+#mod_main .list tbody .one td #num{width:30px;height:22px;border:1px solid #eee;float:left;text-align:center}
+#mod_main .list tbody .one td a{cursor:pointer}
+#mod_main .list tbody .one td #total1{font-size:14px;font-weight:bolder;color:#e10482}
+#mod_main .list table .two{width:990px;height:42px}
+
+#mod_main .list table .two .right{border-top:1px solid #eee;line-height:42px;width:990px;height:42px;text-align:right;font-size:16px;color:#999}
+#mod_main .wt2{width:990px;height:116px;margin-bottom:26px}
+#mod_main .wt2 .con{cursor:pointer;width:86px;height:26px;font-size:20px;display:block;float:left;line-height:116px}
+#mod_main .wt2 ul{float:right;width:371px;height:66px;text-align:right}
+#mod_main .wt2 ul .one{width:361px;height:45px;line-height:45px;margin-top:10px;font-size:14px}
+#mod_main .wt2 ul .one .num{color:#e10482;margin:0 5px}
+#mod_main .wt2 ul .one .pri{font-size:22px;color:#e10482}
+#mod_main .wt2 ul .two{color:#999}
+#mod_main .wt2 button{cursor:pointer;float:right;width:168px;height:40px;line-height:40px;color:#fff;background:#e10482;-webkit-border-radius:15px;margin-top:25px}
+#mod_main .wt3 h2{width:990px;height:33px;border-bottom:2px solid #000;line-height:33px;font-size:14px}
+#mod_main .wt3 ul li{float:left;width:150px;height:272px;padding:10px 24px}
+#mod_main .wt3 ul li img{width:150px;height:150px}
+#mod_main .wt3 ul li .name{width:150px;height:36px;line-height:18px}
+#mod_main .wt3 ul .pri{color:#e10482;font-size:14px;font-weight:bolder;height:31px}
+#mod_main .wt3 ul li button{width:106px;height:35px;border:1px solid #e10482;-webkit-border-radius:20px;background:#fff}

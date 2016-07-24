@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/gouwuche.css" />
+		<script src="../assets/jquery-1.12.0.js"></script>
+		<script src="../assets/index.js"></script>
+		<script src="../js/gouwuche.js"></script>
+		<script src="../js/gouwu.js"></script>
+		<script src="../js/main.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<span id="login" class="li"><a href="http://127.0.0.1:8020/jq/%E9%A1%B9%E7%9B%AE/%E9%A1%B9%E7%9B%AE/src/html/denglu.html">登录</a></span>
+			<span id="zhuce" class="li"><a href="http://127.0.0.1:8020/jq/%E9%A1%B9%E7%9B%AE/%E9%A1%B9%E7%9B%AE/src/html/zhuce.html">免费注册</a></span>
+			<ul>
+				<li class="right li">我的订单</li>
+				<li>|</li>
+				<li class="left right li">我的优惠券</li>
+				<li>|</li>
+				<li class="left right li">我的收藏</li>
+				<li>|</li>
+				<li class="left li">帮助中心</li>
+			</ul>	
+		</div>
+		<div id="floor">
+			<ul>
+				<li class="kefu">
+					<div class="right">
+						<button>联系客服</button>
+						<p>时间：9:00-24:00</p>
+						<p>热线：4008-006-006</p>
+					</div>
+					<div class="left">
+						<img src="../img/kefu.png" />
+						<span>在线客服</span>
+					</div>
+				</li>
+				<li class="gouwu">
+					<div >
+						<img src="../img/gouwuche.png" />
+						<span>购物袋</span>
+					</div>
+					<div class="num">0</div>
+				</li>
+				<li class="shoucang">
+					<div class="shou">我的收藏</div>
+					<div class="shou1"><img src="../img/shoucang.png"/></div>
+				</li>
+				<li class="youhui">
+					<div class="quan">我的优惠券</div>
+					<div class="quan1"><img src="../img/youhuiquan.png"/></div>
+				</li>
+				<li class="ma">
+					<div class="zhuce">
+						<img src="../img/ma.png" />
+						<p>手机注册有礼</p>
+					</div>
+					<div><img src="../img/erweima.png"/></div>
+				</li>
+				<li class="top pointer">
+					<img src="../img/jian.png" />
+					<span>Top</span>
+				</li>
+			</ul>
+		</div>
+		<div id="search">
+			<img src="../img/logo.png" title="嗨淘全球"/>
+			<div class="search">
+				<input type="text" placeholder="搜索商品"/>
+				<button>搜索</button>
+				<ul>
+					<li class="li over">面霜</li>
+					<li>|</li>
+					<li class="li over">面膜</li>
+					<li>|</li>
+					<li class="li over">洁面</li>
+					<li>|</li>
+					<li class="li over">奶粉</li>
+					<li>|</li>
+					<li class="li over">纸尿裤</li>
+					<li>|</li>
+					<li class="li over">辅食</li>
+					<li>|</li>
+					<li class="li over">宝宝营养</li>
+					<li>|</li>
+					<li class="li over">唇部彩妆</li>
+					<li>|</li>
+					<li class="li over">身体护理</li>
+					<li>|</li>
+					<li class="li over">香氛</li>
+				</ul>
+			</div>
+		</div>
+		<div id="stepcar">
+			<div class="steplist">
+				<div class="show"></div>
+				<span class="one">1.购物袋</span>
+				<span class="two">2.确认订单信息</span>
+				<span class="three">3.付款</span>
+			</div>
+		</div>
+		<div id="mod_main">
+			<div class="wt">
+				<table width="100%">
+					<thead>
+						<th width="5%">
+							<input type="checkbox" id="checkall" />
+							<label for="checkall">全选</label>
+						</th>
+						<th width="43%">商品</th>
+						<th width="16%">单价</th>
+						<th width="12%">数量</th>
+						<th width="12%">小计</th>
+						<th width="12%">操作</th>
+					</thead>
+				</table>
+			</div>
+			<div class="wt1">
+				<h1>
+					<input type="checkbox" id="add" />
+					<label>香港直邮</label>
+				</h1>
+				<div class="list">
+					<table width="100%">
+						<tbody>
+							<tr class="one">
+								<td width="5%">
+									<input type="checkbox" />
+								</td>
+								<td width="43%">
+									<img src="../img/la.jpg" />
+									<p>兰蔻 小黑瓶 新精华肌底液  30ml</p>
+								</td>
+								<td width="16%">
+									￥<span id="price">499.00</span>
+								</td>
+								<td width="12%" class="num">
+									<a class="jian">-</a>
+									<input type="text" id="num" value="1">
+									<a class="jia">+</a>
+								</td>
+								<td width="12%">
+									￥<span id="total1">499.00</span>
+								</td>
+								<td width="12%">
+									<a class="del">删除</a>
+								</td>
+							</tr>
+							<tr class="two">
+								<td class="right" colspan="6">
+									<span>商品金额：￥<strong>499.00</strong></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="wt2">
+				<a class="con">继续购物</a>
+				<button>去结算</button>
+				<ul>
+					<li class="one">
+						已选<span class="num">1</span>件商品￥
+						<span class="pri">499.00</span>
+					</li>
+					<li class="two">
+						商品总计：￥<span class="pri">499.00</span>
+					</li>
+				</ul>
+				
+			
+		</div>
+			<div class="wt3">
+				<h2>热销推荐</h2>
+				<ul>
+					<li>
+						<img src="../img/vdl.png" />
+						<p class="name">VDL立体璀璨持久粉底液30ml</p>
+						<p class="pri">￥169.00</p>
+						<button>立即购买</button>
+					</li>
+					<li>
+						<img src="../img/vdl.png" />
+						<p class="name">VDL立体璀璨持久粉底液30ml</p>
+						<p class="pri">￥169.00</p>
+						<button>立即购买</button>
+					</li>
+					<li>
+						<img src="../img/vdl.png" />
+						<p class="name">VDL立体璀璨持久粉底液30ml</p>
+						<p class="pri">￥169.00</p>
+						<button>立即购买</button>
+					</li>
+					<li>
+						<img src="../img/vdl.png" />
+						<p class="name">VDL立体璀璨持久粉底液30ml</p>
+						<p class="pri">￥169.00</p>
+						<button>立即购买</button>
+					</li>
+					<li>
+						<img src="../img/vdl.png" />
+						<p class="name">VDL立体璀璨持久粉底液30ml</p>
+						<p class="pri">￥169.00</p>
+						<button>立即购买</button>
+					</li>
+				</ul>
+			</div>	
+		</div>
+	</body>
+</html>

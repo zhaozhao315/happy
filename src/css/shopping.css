@@ -7,9 +7,10 @@
 #shopping .img span{position:absolute;right:10px;bottom:10px;text-align:center;display:block;width:130px;height:34px;-webkit-border-radius:10px;line-height:34px}
 #shopping .img_list li{margin-top:10px;margin-right:10px;height:60px;height:60px;float:left;border:1px solid #efefef;border-radius:4px}
 #shopping .img_list li img{height:60px;height:60px;float:left;}
-#shopping .right{width:370px;height:500px;float:left;padding-left:80px}
+#shopping .right{width:370px;height:500px;float:left;padding-left:80px;position:relative}
 #shopping .right h3{font-weight:bold;float:left;font-size:22px}
-#shopping .right img{float:right}
+#shopping .right .le{float:right}
+#shopping .right .none{z-index:100;position:absolute;right:100px;top:400px;width:30px;height:30px;border:1px solid #e10482;-webkit-border-radius:15px;display:none}
 #shopping .right .til{margin-bottom:20px;width:370px;height:40px}
 #shopping .right .content{width:370px;color:#333;font-size:16px;line-height:24px;margin-bottom:30px}
 #shopping .right .price{color:#e10482;font-size:24px}
@@ -43,15 +44,21 @@
 #content .con_left .bottom .xiang li img{float:left}
 #content .con_left .bottom .xiang li p{line-height:18px;margin-top:10px}
 #content .con_left .bottom .xiang li span{color:#e10482}
-#content .con_right{float:left;width:720px;height:4666px;margin-left:20px;}
+#content .con_right{float:left;width:720px;margin-left:20px;}
 #content .con_right .top{width:720px;height:28px;border-bottom:2px solid #000}
 #content .con_right .top li{cursor:pointer;width:64px;margin-left:25px;height:28px;line-height:38px;float:left;text-align:center;}
 #content .con_right .top .active{border-bottom:3px solid #e10482;color:#e10482}
 #content .con_right .img{width:680px;height:70px;padding:0 20px;background:#fff}
-#content .con_right .canshu{margin-left:-20px;margin-top:-5px;width:680px;height:400px;padding:20px;background:#fff}
+#content .con_right .canshu{margin-top:-5px;width:680px;height:400px;padding:20px;background:#fff}
 #content .con_right .canshu h4{font-size:26px}
 #content .con_right .canshu dl{position:relative;padding:10px}
 #content .con_right dl dt img{width: 240px; height: 240px;overflow: hidden;position: absolute;left: 365px;top: 5px;}
 #content .con_right .canshu dl dd{font-size:14px;line-height:28px;position: relative;padding: 4px 0 4px 100px;width: 250px;}
 #content .con_right .canshu dl dd .bran{font-size:14px;line-height:28px;color: #999; margin-left:-100px;text-align: right;width: 95px;display: inline-block;padding-right: 5px;}
-#content .con_right .qq{margin-left:-20px}
+#content .con_right .two ul{width:620px;background:#fff;padding:0 50px}
+#content .con_right .two{display:none}
+#content .con_right .two ul li{width:620px;height:65px;padding:30px 0;border-bottom:1px solid #eee}
+#content .con_right .two ul li span{display:block;height:34px;font-size:16px;float:left;margin-right:20px}
+#content .con_right .two ul li p{width:540px;height:34px;font-size:16px;}
+#content .con_right .two ul li .time{color:#999;font-size:14px}
+#content .con_right .two ul li img{width:60px;height:60px;float:left;margin-right:10px}

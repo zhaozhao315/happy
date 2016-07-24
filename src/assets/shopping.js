@@ -20,14 +20,39 @@
 	}).on('mouseout',function(){
 		$(this).css('opacity','1');
 	});
-	//商品列表点击划过改变类
+	
+	
+	//商品列表点击改变类,并且改变当前显示页面
 	$('#content .con_right .top').on('click','li',function(){
-		$(this).addClass('active');
+		index=$(this).index();
+		$(this).addClass('active').siblings().removeClass('active');
+		$('#content .con_right').children('div').eq(index).show().siblings('div').hide();
 
 	});
+	//加入购物车，点击，购物车商品数量增加
+	var i=parseInt($('#floor .gouwu .num').html());
+	$('#shopping .right .dai').on('click',function(){
+		$(this).next().show().animate({top:$('#floor .gouwu').offset().height,right:-250},1000);
+		
+		$('#floor .gouwu .num').html(i);
+		i++;
+		console.log(i)
+	});
+	//$('#shopping .right .none').hide();
 	var $input=$('#shopping .right dl dd input');
-	$('#shopping .right dl .jian').on('click',function(){
-		$input.val()++;
-	})
+	var i=$input.val();
+	
+	$('#shopping .right dl a').on('click',function(){
+		if($(this).hasClass('jia')){
+			i++;
+			$input.val(i);
+		}else if($(this).hasClass('jian')){
+			i--;
+			if(i<=1){
+				i=0;
+			}
+			$input.val(i);
+		}
+	});
 	
 });
