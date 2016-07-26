@@ -8,7 +8,9 @@
 		<link rel="stylesheet" href="../css/zhuce.css" />
 		<script src="../assets/jquery-1.12.0.js"></script>
 		<script src="../assets/index.js"></script>
-		<script src="../js/denglu.js"></script>
+		<script src="../assets/denglu.js"></script>
+		<script src="../assets/zhuce.js"></script>
+		<script src="../js/main.js"></script>
 	</head>
 	<body>
 		<div id="head">
@@ -58,19 +60,24 @@
 		<div id="welcome">
 			<img src="../img/a2.png" />
 			<span>欢迎登录加入嗨淘全球</span>
-			<a href="http://127.0.0.1:8020/jq/%E9%A1%B9%E7%9B%AE/%E9%A1%B9%E7%9B%AE/src/html/denglu.html">去登录</a>
+			<a href="http://127.0.0.1:8020/jq/register/register/src/html/denglu.html">去登录</a>
 			<p>已是嗨淘全球会员？</p>
 		</div>
 		<div id="zhuce">
 			<img src="../img/a4.png" />
 			<div id="login_two">
 				<div class="name">
-					<span>手机号</span>
+					<span class="span">手机号</span>
 					<input type="text" placeholder="请输入您的手机号" />
+					<span class="warn">!请输入手机号码</span>
 				</div> 
 				<div class="word">
-					<span>验证码</span>
+					<span class="span">验证码</span>
 					<input type="password" placeholder="请输入图形验证码" />
+					<div class="tuxing">
+						<img src="../img/ec84.png" />
+					</div>
+					<span class="warn">!请输入图形验证码</span>
 				</div>
 				<div class="duanxin">
 					<span class="xin">短信验证码</span>
@@ -78,6 +85,7 @@
 					<input type="password" placeholder="请输入短信验证码" />
 					<span class="ma">获取短信验证码</span>		
 					</div>
+					<span class="warn">!请输入验证码</span>
 				</div>
 				<div class="btn">
 					<button>下一步</button>			
@@ -86,14 +94,26 @@
 			</div>
 			<div id="login_one_zhu">
 				<div class="name">
-					<span>昵称</span>
+					<span class="span">昵称</span>
 					<input type="text" placeholder="请输入您的昵称" />
+					<span class="warn">!请输入昵称</span>
 				</div> 
 				<div class="word">
-					<span>密码</span>
-					<input type="password" placeholder="请输入密码" />
-					<span class="xin">确认密码</span>
-					<input type="password" placeholder="请重新输入密码" />
+					<div class="one_">
+					<span class="span">密码</span>
+					<input type="password" placeholder="请输入密码" class="one"/>
+					</div>
+					<span class="warn">密码不能少于6位，必须是数字和小写字母</span>
+					<div class="two_">
+					<span class="xin span">确认密码</span>
+					<input type="password" placeholder="请重新输入密码" class="two"/>
+					</div>
+					<span class="warn">!两次密码不一致</span>
+				</div>
+				<div class="check">
+					<input type="checkbox"/>
+					<span>我已同意并阅读<a href="">【嗨淘会员注册协议】</a></span><br />
+					<span class="warn">请阅读协议并同意</span>
 				</div>
 				<div class="btn">
 					<button>注册</button>			

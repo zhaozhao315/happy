@@ -1,13 +1,59 @@
 ;$(function(){
 	//大图显示
-	var index=0;
+	var index;
 	var isClick=false;
 	$('#shopping .img_list').on('mouseover','li',function(){
 		index=$(this).index();
-		$('#shopping .img').find('img').eq(index).show().siblings().hide();
-		$(this).css('border','1px solid #000').siblings('li').css('border','1px solid #efefef');
+		$('#shopping .img').find('img').eq(index).show().siblings('img').hide();
+		$(this).addClass('bar').css('border','1px solid #000').siblings('li').removeClass('bar').css('border','1px solid #efefef');
 		//console.log(index)
 	});
+	//放大镜效果
+	//鼠标划过图片，放大镜出现
+	var $img_=$('#shopping .img');
+	var $show=$('#show');
+	$('#shopping .img').on('mouseover',function(){
+		$('#show').show();
+		//index=$(this).index('#shopping .img img');
+		$('#shopping .big').show();
+		index=$('#shopping .img_list ul .bar').prevAll().length;
+		$('#shopping .big').find('img').eq(index).show().siblings().hide();
+	}).on('mousemove',function(e){
+		var event=e||event;
+		var x=e.offsetX;
+		var y=e.offsetY;
+		if(x<0){
+			x=0;
+		}else if(x>$img_.outerWidth()-$show.outerWidth()){
+			x=$img_.outerWidth()-$show.outerWidth();
+		}
+		if(y<0){
+			y=0;
+		}else if(y>$img_.outerHeight()-$show.outerHeight()){
+			y=$img_.outerHeight()-$show.outerHeight();
+		}
+		$show.css({
+			left:x,
+			top:y
+		});
+		//比例
+		var percentX=x/($img_.outerWidth()-$show.outerWidth());
+		var percentY=y/($img_.outerHeight()-$show.outerHeight());
+		var $big=$('#shopping .big');
+		var oimg=$('#shopping .big img');
+		oimg.css({
+			left:-percentX*(oimg.outerWidth()-$big.outerWidth()),
+			top:-percentX*(oimg.outerHeight()-$big.outerHeight())
+		});
+		
+	}).on('mouseout',function(){
+		$('#show').hide();
+		$('#shopping .big').hide();
+	});
+	
+	
+	//鼠标移动，放大镜跟随
+	
 	//改变背景颜色
 	$('#shopping .right .tixing span').on('mouseover',function(){
 		$(this).css('background','#e10482');

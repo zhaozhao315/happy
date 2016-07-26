@@ -2,8 +2,9 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 var path = require('path');
-
 var contenttype = require('./contentType');
+var os = require('os');
+
 var server = http.createServer(function(req, res) {
     var params = url.parse(req.url, true);
     var pathname = params.pathname;
@@ -12,12 +13,125 @@ var server = http.createServer(function(req, res) {
     if(/^\/ajax\/(\w+)$/i.test(pathname)){
         // 返回前端的文本
         var resText = '';
-       // 根据不同的路径返回相应的数据
+
+        // 根据不同的路径返回相应的数据
         switch(RegExp.$1){
-        	case 'liuyanban':
-                var data = require('./data/liuyanban.json');
+            case 'ajaxtest':
+                resText = 'hello, 异步请求数据获取成功！';
+                break;
+            case 'getCity':
+                resText = '["北京","上海","广州","深圳","杭州","大连"]';
+                break;
+            case 'getJSONP':
+                var data = {
+                    name: '王大锤',
+                    age: 30,
+                    sex: '男',
+                    married:false
+                }
+                if (params.query && params.query.callback) {
+                    resText = params.query.callback + '(' + JSON.stringify(data) + ')';
+                } else {
+                    resText = JSON.stringify(data);
+                }
+                break;
+            case 'checkname':
+                var names = ['张三','李四','王尼玛','奥巴马'];
+                if (params.query && params.query.regname) {
+                    var name = params.query.regname;
+                    resText = names.indexOf(name) != -1 ? 'false' : 'true';
+                }
+                break;
+            case 'weibo':
+                var data = require('./data/weibo.json');
                 resText = JSON.stringify(data);
                 break;
+            case 'football':
+                var data = require('./data/football.json');
+                var output = {total:data.length};
+                if (params.query && params.query.pageNo) {
+                    var page = params.query.pageNo || 1;
+                    var pageCount = params.query.pageCount || 10;
+                    output.data = data.slice((page-1)*pageCount,page*pageCount);
+                    output.pageNo = +page;
+                    output.pageCount = pageCount;
+                    
+                    resText = JSON.stringify(output);
+                }else{
+                    output.data = data;
+                    resText = JSON.stringify(output);
+                }
+                break;
+            case 'register':
+                var data = require('./data/zhuce.json') || [];
+                var output = {total:data.length};
+                var query = params.query;
+                if(query){
+                    // 请求数据:query
+                    // 提交数据：send
+                    if(query.type == 'query'){
+                        // 请求数量
+                        output.qty = query.qty || 50;
+                        output.data = data.slice(0,output.qty-1);
+                        resText = JSON.stringify(output);
+                    }else if(query.type == 'send'){
+                        var now = new Date();
+                        var date = now.toLocaleDateString();
+                        var hour = now.getHours();
+                        var min = now.getMinutes();
+                        var sec = now.getSeconds();
+                        hour = hour < 10 ? '0'+hour:hour;
+                        min = min < 10 ? '0'+min:min;
+                        sec = sec < 10 ? '0'+sec:sec;
+
+
+                        var postData = {
+                            username:query.regname,
+                            userpwd:query.passpwd,
+                        }
+                        data.unshift(postData);
+
+                        // 写入文件
+                        fs.writeFile(__dirname + '/data/zhuce.json',JSON.stringify(data));
+                    }
+                }
+
+                if(req.method.toLowerCase() == 'post'){
+
+                    var postStr = '';
+                    req.addListener('data',function(chunk){
+                        postStr += chunk;
+                        console.log('data:',chunk);
+                    });
+                    req.addListener('end',function(){
+                        console.log('end:',postStr);
+                    });
+                }
+                break;
+            case 'getIP':
+                resText = getClientIp();
+                break;
+
+        }
+
+        // 获取客户端IP
+        function getClientIp() {
+            var ipinfo = os.networkInterfaces();
+            var ip = '';
+            iploops:
+            {
+                for(var attr in ipinfo){
+                    for(var i=0;i<ipinfo[attr].length;i++){
+                        var obj = ipinfo[attr][i];
+                        if(obj.family == 'IPv4'){
+                            ip = obj.address;
+                            break iploops;
+                        }
+                    }
+                }
+            }
+            
+            return ip;
         }
 
         res.writeHead(200,{'content-type':'text/plain;charset=utf8'});

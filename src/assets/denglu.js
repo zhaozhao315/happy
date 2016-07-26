@@ -30,6 +30,14 @@
 	var $name2=$('#denglu #login_two .name input');
 	var $word2=$('#denglu #login_two .word input');
 	var _duanxin=$('#denglu #login_two .duanxin input');
+	var aImg=['ebqk','c87g','cp67','emw3','ec84','cxg4'];
+			var uimg=aImg[parseInt(Math.random()*6)];
+			var $Img=$('#zhuce #login_two').find('img');
+			$Img.attr('src','../img/'+uimg+'.png');
+			$("#zhuce #login_two img").click(function(){
+				var uimg=aImg[parseInt(Math.random()*6)];
+				$Img.attr('src','../img/'+uimg+'.png');
+			});
 	$('#denglu #login_one .btn').on('click',function(){
 		if(!$username.test($name1.val())){
 			$('#denglu #login_one .name').css({
@@ -45,7 +53,30 @@
 		}else{
 			$('#denglu #login_one .word').css('border','none').children('.warn').hide();
 		}
-		
+		$.ajax({
+				type:"get",
+				url:"http://10.16.155.23:3000/js/register?type=query",
+				async:true,
+				dataType:'json',
+				success:function(res){
+						//console.log(res);
+						$.each(res.data, function(idx,item) {    
+							//console.log(item);
+							if($name1.val()==item.username && $word1.val()==item.userpwd){
+								console.log("登录成功")
+								$('#header #login').html('欢迎您');
+								$('<a/>').html('[退出]').insertAfter($('#header #login'));
+								var userinfo = {username:$name.val(),userpwd:$word1.val()};
+		 						document.cookie = 'userInfo=' + JSON.stringify(userinfo);
+								//fnSetCookie($name.val(),$word1.val(),7);
+							}else{
+								$('#denglu #login_one .word').children('.warn').html('用户名与密码不匹配').show();
+								$name1.val()="";
+								$word1.val()="";
+								}
+							});
+						}
+					});
 		});
 	//获焦、失焦状态输入框的变化
 	$name1.on('blur',function(){
