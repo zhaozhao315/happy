@@ -53,32 +53,15 @@
 		}else{
 			$('#denglu #login_one .word').css('border','none').children('.warn').hide();
 		}
-		//如果全部符合条件，发送登录信息到后台
+		//如果全部符合条件,检查cookie，储存login，跳转
 		if($username.test($name1.val())&&$word.test($word1.val())){
-			$.ajax({
-				type:"get",
-				url:"http://10.16.155.14:3000/ajax/register?type=query",
-				async:true,
-				dataType:'json',
-				success:function(res){
-					console.log(res);
-					$.each(res.data, function(idx,item) {    
-						console.log(item);
-							if($name1.val()==item.username && $word1.val()==item.userpwd){
-								console.log("登录成功")
-								$('#header #login').html('欢迎您');
-								$('<a/>').html('[退出]').insertAfter($('#header #login'));
-								var userinfo = {username:$name.val(),userpwd:$word1.val()};
-		 						document.cookie = 'userInfo=' + JSON.stringify(userinfo);
-								//fnSetCookie($name.val(),$word1.val(),7);
-							}else{
-								$('#denglu #login_one .word').children('.warn').html('用户名与密码不匹配').show();
-								$name1.val()="";
-								$word1.val()="";
-								}
-						});
-				}
-			});
+			if(fnCheckCookie('name')!=$name1.val()||fnCheckCookie('word')!=$word1.val()){
+				$('#denglu #login_one .word').children('.warn').html('用户名或密码错误').show();
+		}else{
+			fnSetCookie('login','true',7);
+			window.location.href="http://127.0.0.1:8020/jq/project/project/src/html/index.html";
+			$('#denglu #login_one .word').children('.warn').hide();
+		}
 		}
 		});
 	//获焦、失焦状态输入框的变化

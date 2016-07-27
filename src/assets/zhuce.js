@@ -22,11 +22,6 @@
 	//检查是否已登录或者已注册
 		//获焦失焦状态
 		$name2.on('blur',function(){
-			if(fnCheckCookie('login')=='true'){
-				$('#zhuce #login_two .name').css({
-				border:'2px solid #e10482',
-			}).children('.warn').html('已经登陆').show();
-			}else{
 				if(!$username.test($name2.val())){
 					$('#zhuce #login_two .name').css({
 						border:'2px solid #e10482',
@@ -34,7 +29,6 @@
 				}else{
 					$('#zhuce #login_two .name').css('border','none').children('.warn').hide();
 				}
-			}
 	}).on('focus',function(){
 		$('#zhuce #login_two .name').css('border','2px solid #bbb').children('.warn').hide();
 
@@ -136,12 +130,21 @@
 			$('#zhuce #login_one_zhu .check').children('.warn').show();
 		}
 		if($name.test($name1.val())==true&&$word.test($mima.val())==true&&$mima1.val()==$mima.val()&&$('#zhuce #login_one_zhu .check :checkbox').prop('checked')){
-		var $name_=$name2.val();
-		var $mima_=$mima.val();
 		console.log("1")
-		fnSetCookie($name2.val(),$mima.val(),7);
+		fnSetCookie('name',$name2.val(),7);
+		fnSetCookie('word',$mima.val(),7);
 		fnSetCookie('login','true',7);
-					$.ajax({
+		window.location.href="http://127.0.0.1:8020/jq/project/project/src/html/index.html";
+				
+		}
+	});
+			
+
+});
+
+
+
+/*$.ajax({
 					type:"get",
 					url:"http://10.16.155.14:3000/ajax/register?type=send",
 					async:true,
@@ -151,16 +154,7 @@
 						alert('恭喜你，注册成功！');
 						window.location.href="../index.html";
 					}
-				});
-		}
-	});
-			
-
-});
-
-
-
-
+				});*/
 
 
 /*$.ajax({

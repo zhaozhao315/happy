@@ -1,4 +1,14 @@
 $(function(){
+	if(fnCheckCookie('login')=='true'){
+		$('<strong/>').html('欢迎您').insertAfter($('#header #login'));
+		$('#login').html('[退出]');	
+	}
+	$('#login').on('click',function(){
+		$('#login').html('登录');
+		$('#header strong').remove();
+		fnRemoveCookie('login');
+		window.location.reload();
+	})
 		$('#header').on('mouseover','.li',function(){
 			$(this).css('color','#e10482');
 			$(this).children().css('color','#e10482');

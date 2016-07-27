@@ -8,7 +8,8 @@ body{font-size:12px}
 img{border:none}
 /*=================header==========================================*/
 #header{width:1388px;height:26px;background:#f4f4f4;border-bottom:1px solid #e8e8e8;position:relative}
-#header span{position:absolute;font-size:11px;color:#666666}
+#header span{position:absolute;font-size:11px;color:#666666;cursor:pointer}
+#header strong{position:absolute;top:7px;left:70px}
 #header #login{top:7px;left:123px}
 #header #zhuce{top:7px;left:159px}
 #header ul{float:right;margin-right:87px}

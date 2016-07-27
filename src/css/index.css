@@ -21,7 +21,7 @@
 /*=================banner==========================================*/
 #banner{width:1367px;height:15228px;background:url(../img/bg.png) repeat;padding-left:56px;position:relative}
 #banner #ban1{height:160px;position:relative}
-#banner #ban1 ul li{float:left;margin:-right:9px;position:absolute;top:30px}
+#banner #ban1 ul li{float:left;margin-right:9px;position:absolute;top:30px}
 #banner #ban1 ul .top1{left:0px}
 #banner #ban1 ul .top2{left:300px}
 #banner #ban1 ul .top3{left:600px}

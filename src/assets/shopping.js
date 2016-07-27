@@ -81,10 +81,30 @@
 		$(this).next().show().animate({top:$('#floor .gouwu').offset().height,right:-250},1000);
 		
 		$('#floor .gouwu .num').html(i);
+		fnSetCookie('num',$('#floor .gouwu .num').html(),7)
+		var goodname='goods'+i;
 		i++;
-		console.log(i)
+		
+		var value={};
+		value.imgurl=$('#first').attr('src');
+		value.name=$('#shopping .right h3').text();
+		value.price=$('#shopping .right b').text();
+		var lastcookie=document.cookie;
+		if(lastcookie.indexOf(goodname)!=-1){
+			$.each(lastcookie.split(';'),function(idx,val){
+				var name=val.split('=')[0];
+				if(name==goodname){
+					value.qty = JSON.parse(val.split('=')[1]).qty + 1;
+					return false;
+				}
+			});
+		}else{
+			value.qty=1;
+		}
+		var _cookie=goodname+'='+JSON.stringify(value);
+		console.log(_cookie)
+		document.cookie = _cookie + ';path=/';
 	});
-	//$('#shopping .right .none').hide();
 	var $input=$('#shopping .right dl dd input');
 	var i=$input.val();
 	
@@ -100,5 +120,6 @@
 			$input.val(i);
 		}
 	});
+	
 	
 });
