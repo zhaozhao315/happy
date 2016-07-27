@@ -53,15 +53,17 @@
 		}else{
 			$('#denglu #login_one .word').css('border','none').children('.warn').hide();
 		}
-		$.ajax({
+		//如果全部符合条件，发送登录信息到后台
+		if($username.test($name1.val())&&$word.test($word1.val())){
+			$.ajax({
 				type:"get",
-				url:"http://10.16.155.23:3000/js/register?type=query",
+				url:"http://10.16.155.14:3000/ajax/register?type=query",
 				async:true,
 				dataType:'json',
 				success:function(res){
-						//console.log(res);
-						$.each(res.data, function(idx,item) {    
-							//console.log(item);
+					console.log(res);
+					$.each(res.data, function(idx,item) {    
+						console.log(item);
 							if($name1.val()==item.username && $word1.val()==item.userpwd){
 								console.log("登录成功")
 								$('#header #login').html('欢迎您');
@@ -74,9 +76,10 @@
 								$name1.val()="";
 								$word1.val()="";
 								}
-							});
-						}
-					});
+						});
+				}
+			});
+		}
 		});
 	//获焦、失焦状态输入框的变化
 	$name1.on('blur',function(){

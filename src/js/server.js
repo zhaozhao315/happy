@@ -8,6 +8,7 @@ var os = require('os');
 var server = http.createServer(function(req, res) {
     var params = url.parse(req.url, true);
     var pathname = params.pathname;
+  res.setHeader('Access-Control-Allow-Origin', '*');
 
     // 响应ajax请求
     if(/^\/ajax\/(\w+)$/i.test(pathname)){
@@ -63,7 +64,7 @@ var server = http.createServer(function(req, res) {
                 }
                 break;
             case 'register':
-                var data = require('./data/zhuce.json') || [];
+                var data = require('./assets/login.json') || [];
                 var output = {total:data.length};
                 var query = params.query;
                 if(query){
@@ -88,11 +89,34 @@ var server = http.createServer(function(req, res) {
                         var postData = {
                             username:query.regname,
                             userpwd:query.passpwd,
+                            login:query.login,
+                            createtime:date + ' ' + hour + ':' + min + ':' + sec
                         }
                         data.unshift(postData);
 
                         // 写入文件
-                        fs.writeFile(__dirname + '/data/zhuce.json',JSON.stringify(data));
+                        fs.writeFile(__dirname + '/assets/user.json',JSON.stringify(data));
+                    }else if(query.type=='login'){
+                    	var now = new Date();
+                        var date = now.toLocaleDateString();
+                        var hour = now.getHours();
+                        var min = now.getMinutes();
+                        var sec = now.getSeconds();
+                        hour = hour < 10 ? '0'+hour:hour;
+                        min = min < 10 ? '0'+min:min;
+                        sec = sec < 10 ? '0'+sec:sec;
+
+
+                        var postData = {
+                            username:query.regname,
+                            userpwd:query.passpwd,
+                            login:query.login,
+                            createtime:date + ' ' + hour + ':' + min + ':' + sec
+                        }
+                        data.unshift(postData);
+
+                        // 写入文件
+                        fs.writeFile(__dirname + '/assets/login.json',JSON.stringify(data));
                     }
                 }
 

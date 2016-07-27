@@ -19,15 +19,22 @@
 				var uimg=aImg[parseInt(Math.random()*6)];
 				$Img.attr('src','../img/'+uimg+'.png');
 			});
+	//检查是否已登录或者已注册
 		//获焦失焦状态
 		$name2.on('blur',function(){
-			if(!$username.test($name2.val())){
-			$('#zhuce #login_two .name').css({
+			if(fnCheckCookie('login')=='true'){
+				$('#zhuce #login_two .name').css({
 				border:'2px solid #e10482',
-			}).children('.warn').show();
-		}else{
-			$('#zhuce #login_two .name').css('border','none').children('.warn').hide();
-		}
+			}).children('.warn').html('已经登陆').show();
+			}else{
+				if(!$username.test($name2.val())){
+					$('#zhuce #login_two .name').css({
+						border:'2px solid #e10482',
+					}).children('.warn').show();
+				}else{
+					$('#zhuce #login_two .name').css('border','none').children('.warn').hide();
+				}
+			}
 	}).on('focus',function(){
 		$('#zhuce #login_two .name').css('border','2px solid #bbb').children('.warn').hide();
 
@@ -128,21 +135,67 @@
 		}else{
 			$('#zhuce #login_one_zhu .check').children('.warn').show();
 		}
+		if($name.test($name1.val())==true&&$word.test($mima.val())==true&&$mima1.val()==$mima.val()&&$('#zhuce #login_one_zhu .check :checkbox').prop('checked')){
 		var $name_=$name2.val();
 		var $mima_=$mima.val();
-		fnSetCookie($name2.val(),$mima.val(),7)
-		fnSetCookie('login',"true",7)
+		console.log("1")
+		fnSetCookie($name2.val(),$mima.val(),7);
+		fnSetCookie('login','true',7);
 					$.ajax({
 					type:"get",
-					url:"http://10.16.155.23:3000/js/register?type=send",
+					url:"http://10.16.155.14:3000/ajax/register?type=send",
 					async:true,
 					data:{regname:$name_,passpwd:$mima_,login:true},
 					success:function(res){
+						console.log("2")
 						alert('恭喜你，注册成功！');
 						window.location.href="../index.html";
 					}
 				});
+		}
 	});
 			
 
 });
+
+
+
+
+
+
+/*$.ajax({
+	type:"get",
+	url:"http://10.16.155.21:3000/ajax/register?type=query",
+	async:true,
+	dataType:'json',
+	success:function(res){
+	console.log(res)
+	$.each(res.data, function(idx,item) { 
+	console.log(item.username+","+usernameval);
+	console.log(item.userpwd+","+pwdval);
+	if(usernameval==item.username && pwdval==item.userpwd){
+	fnSetCookie($username.find("input").val(),$password.find("input").val(),7)
+	fnSetCookie('login',"true",7)
+	$errar.hide();
+	$.ajax({
+			type:"get",
+			url:"http://10.16.155.21:3000/ajax/register?type=login",
+			async:true,
+			data:{regname:$username.find
+			("input").val(),passpwd:$password.find("input").val(),login:true},
+			success:function(res){
+			alert('恭喜你，注册成功！');
+			window.location.href="../index.html";
+												}
+											});
+										window.location.href="../index.html";
+								}else{
+									$errar.html("<img src='../css/img/Warning.jpg'/>账户名与密
+
+码不匹配，请重新输入").show();
+									$username.val("");
+									$password.val("");
+								}
+							});
+						}
+					});*/
